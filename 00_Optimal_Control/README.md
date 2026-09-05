@@ -4,12 +4,12 @@
 
 This project is an implementation-focused companion to the **Stanford AA203: Optimal and Learning-Based Control** lectures.
 
-The goal is to build practical intuition for the progression from **optimal control to reinforcement learning**, while focusing on two complementary questions:
+The goal is to build practical intuition for the progression from **optimal control to reinforcement learning**, while focusing on two questions:
 
 1. **Problem formulation — What problem should we solve?**
 2. **Algorithm — How do we solve it?**
 
-A key objective is learning how to translate a physical or behavioral requirement into a mathematical optimization problem:
+A key focus is learning how to translate a physical or behavioral requirement into a mathematical problem:
 
 ```text
 Requirement
@@ -22,34 +22,30 @@ Cost / Reward
     ↓
 Constraints
     ↓
-Parameters
-    ↓
-Optimization Problem
+Optimization / Learning Problem
 ```
 
 ## Approach
 
-Each topic will contain only the theory necessary to understand and implement the algorithm:
+Each notebook contains only the theory needed to understand and implement the main idea:
 
-* Simple intuition
-* Assumptions
-* Essential mathematical formulation
-* Core algorithm
-* JAX implementation
-* Small experiment and visualization
-* Parameter/constraint experiments
-* Short takeaway
+- Intuition and assumptions
+- Essential mathematical formulation
+- Core algorithm
+- Implementation
+- Small experiments and visualizations
+- Short takeaway
 
-Important algorithmic components will be implemented explicitly, while **JAX** will provide tools such as automatic differentiation.
+Important algorithmic components are implemented explicitly, while **JAX**, **PyTorch**, and standard numerical tools are used where appropriate.
 
-The simplest suitable environment will be used for each algorithm. A lightweight **2D kinematic car model** will be used particularly for trajectory optimization and finite-horizon control, with selected algorithms later tested in **highway-env**.
+Simple environments are used to keep the focus on the algorithms. A **2D kinematic car model** and **highway-env** are used for selected control and decision-making experiments.
 
 ## Roadmap
 
-The project follows the conceptual progression of AA203:
+The notebooks follow the progression:
 
 ```text
-Open-Loop Control
+Open-Loop Optimal Control
         ↓
 Indirect & Direct Methods
         ↓
@@ -61,11 +57,21 @@ HJB / HJI
         ↓
 MPC
         ↓
-Adaptive & Learning Control
+System Identification & Adaptive Control
         ↓
-Model-Free / Model-Based RL
+Imitation Learning
+        ↓
+RL Foundations
+        ↓
+Value-Based RL
+        ↓
+Policy Gradients & Actor-Critic
+        ↓
+PPO
+        ↓
+Model-Based RL
 ```
 
-The emphasis is not on implementing as many algorithms as possible, but on understanding **how the problem formulation and solution algorithm together produce the resulting system behavior**.
+The emphasis is not on implementing as many algorithms as possible, but on understanding **how problem formulation, optimization, learning, and system behavior are connected**.
 
 > **Guiding principle:** Environment complexity should never exceed what is necessary to understand the algorithm.
